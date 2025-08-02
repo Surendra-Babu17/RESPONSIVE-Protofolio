@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+.certification-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.certification-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #38bdf8;
+  animation: fadeInDown 1s ease;
+}
+
+.certification-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.certification{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0%;
+}
+
+.cert-card {
+  background: ;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+  transition: transform 0.3s, background 0.3s;
+  font-size: 1.1rem;
+  min-width: 220px;
+  animation: fadeInUp 1s ease;
+  
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
