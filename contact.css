@@ -39,11 +39,11 @@ body{
 }
 
 .contact-card {
-  background: rgb(37, 37, 40);
+  background:;
   padding: 20px;
   width: 150px;
   border-radius: 12px;
-  color: white;
+  color: black;
   text-decoration: none;
   transition: transform 0.3s ease, background 0.3s ease;
   display: flex;
@@ -64,3 +64,4 @@ body{
   background: white;
   color: black;
 }
+
