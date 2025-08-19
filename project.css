@@ -139,3 +139,49 @@ h2 {
   transform: scale(1.08);
   background: #1a75ff;
 }
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1.5rem 2rem; */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 0px 10px;
+  border-radius: 0px 0px 0px 0px;
+  animation: slideDown 1s ease-in-out;
+  
+  
+  color: white;
+  background-color: rgb(157, 2, 157);
+}
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin-right: 1%;
+}
+
+.nav-links li {
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.nav-links a {
+  color: BLACK;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 8px rgba(19, 19, 19, 0.3); */
+  /* border: 2px solid rgb(108, 102, 102); */
+}
