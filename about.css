@@ -145,54 +145,7 @@ img {
   }
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .logo {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 0;
-  }
-
-  .nav-links li {
-    width: 100%;
-  }
-
-  .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border-radius: 0;
-  }
-
-  .container {
-    margin: 20px;
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 1.8em;
-  }
-
-  h2 {
-    font-size: 1.3em;
-  }
-
-  ul li {
-    font-size: 14px;
-    padding: 8px;
-  }
-}
 /* Hamburger Icon */
 .hamburger {
   display: none;
