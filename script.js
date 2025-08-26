@@ -41,3 +41,7 @@ function showSlide() {
 }
 
 setInterval(showSlide, 3000); 
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
