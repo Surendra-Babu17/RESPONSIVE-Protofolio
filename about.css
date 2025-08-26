@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -192,3 +193,47 @@ img {
     padding: 8px;
   }
 }
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile Menu Hidden by Default */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  flex-wrap: wrap;
+  transition: max-height 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    max-height: 0;         /* hidden */
+    overflow: hidden;
+    background: rgb(9, 176, 9);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-links.show {
+    max-height: 300px;     /* visible */
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+  }
+}
+
