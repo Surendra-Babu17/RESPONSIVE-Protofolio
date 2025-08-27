@@ -1,10 +1,9 @@
-
 body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
-  color: #fff;
+  color: white;
   line-height: 1.6;
   font-weight: 700;
 }
@@ -13,18 +12,21 @@ body {
 .container {
   max-width: 900px;
   margin: 40px auto;
-  background: rgba(0, 128, 0, 0.2);
+  background: black;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3);
+  box-shadow: 0 10px 20px white;
   text-align: center;
   transition: all 0.3s ease;
+  
 }
 
 .container:hover {
-  background-color: rgb(9, 176, 9);
+  background: darken(black, 5%);
   cursor: pointer;
+  
 }
+
 
 /* Headings */
 h1 {
@@ -46,18 +48,26 @@ ul {
 }
 
 ul li {
-  background-color: #e3e0e0;
-  padding: 10px;
+  /* background-color: #e3e0e0; */
+  padding: 20px;
   margin: 8px 0;
   border-radius: 8px;
-  color: black;
+  border: 1px solid white;
+  color: white;
   font-weight: 700;
   text-align: center;
+}
+ul li:hover {
+  background: white;
+  cursor: pointer;
+  color: black;
+
+
 }
 
 /* Highlight */
 strong {
-  color: yellow;
+  color: white;
   font-weight: 800;
   font-size: 18px;
 }
@@ -82,13 +92,14 @@ img {
   top: 0;
   z-index: 1000;
   box-shadow: 0px 0px 10px;
-  background-color: rgb(9, 176, 9);
+  background: black;
   flex-wrap: wrap;
 }
 
 .logo {
   font-size: 22px;
   font-weight: bold;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .nav-links {
@@ -109,13 +120,17 @@ img {
   transition: 0.3s;
   font-weight: 600;
   padding: 8px 12px;
-  border-radius: 8px;
+  border-radius: 4px;
   background: white;
+}
+.nav-links li{
+  border: 1px solid rgb(48, 47, 47);
 }
 
 .nav-links a:hover {
-  background: yellow;
+  background: white;
   color: black;
+  box-shadow: 0px 0px 10px white;
 }
 
 /* ===== Responsive Design ===== */
@@ -172,7 +187,7 @@ img {
     flex-direction: column;
     width: 100%;
     text-align: center;
-    max-height: 0;         /* hidden */
+    max-height: 50px;         /* hidden */
     overflow: hidden;
     background: rgb(9, 176, 9);
     border-radius: 0 0 10px 10px;
@@ -189,4 +204,3 @@ img {
     border-radius: 0;
   }
 }
-
