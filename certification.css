@@ -6,73 +6,7 @@ body {
   color: #f1f5f9;
 }
 
-.certification-section {
-  padding: 40px;
-  text-align: center;
-}
-
-.certification-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #38bdf8;
-  animation: fadeInDown 1s ease;
-}
-
-.certification-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.certification{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0%;
-}
-
-.cert-card {
-  background: ;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
-  transition: transform 0.3s, background 0.3s;
-  font-size: 1.1rem;
-  min-width: 220px;
-  animation: fadeInUp 1s ease;
-  
-}
-
-.cert-card:hover {
-  transform: scale(1.05);
-  background: #0ea5e9;
-  color: white;
-  cursor: pointer;
-}
-
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* ---------- Navbar ---------- */
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -83,13 +17,11 @@ body {
   top: 0;
   z-index: 1000;
   box-shadow: 0px 0px 10px;
-  border-radius: 0px 0px 0px 0px;
   animation: slideDown 1s ease-in-out;
-  
-  
+  background-color: #1e293b; /* Dark blue navbar */
   color: white;
-  background-color: ;
 }
+
 .logo {
   font-size: 30px;
   font-weight: bold;
@@ -109,13 +41,122 @@ body {
 }
 
 .nav-links a {
-  color: BLACK;
+  color: black;
   text-decoration: none;
   font-size: 18px;
-  transition: color 0.3s;
+  transition: 0.3s;
   font-weight: 600;
   padding: 10px;
   border-radius: 10px;
-  /* box-shadow: 0px 0px 8px rgba(19, 19, 19, 0.3); */
-  /* border: 2px solid rgb(108, 102, 102); */
 }
+
+.nav-links a:hover {
+  background: #38bdf8;
+  color: white;
+}
+
+/* ---------- Certifications Section ---------- */
+.certification-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.certification-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #38bdf8;
+  animation: fadeInDown 1s ease;
+}
+
+.certification-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cert-card {
+  background: #1e293b;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+  transition: transform 0.3s, background 0.3s;
+  font-size: 1.1rem;
+  min-width: 220px;
+  animation: fadeInUp 1s ease;
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Responsive Design ---------- */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0 0;
+  }
+
+  .certification-section h2 {
+    font-size: 2rem;
+  }
+
+  .cert-card {
+    min-width: 180px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .certification-section {
+    padding: 20px;
+  }
+
+  .certification-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .cert-card {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 15px 20px;
+  }
+}
+
