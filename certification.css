@@ -2,7 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #0f172a;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9));
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
   color: #f1f5f9;
 }
 
@@ -12,19 +14,24 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem; 
+  padding: 1.5rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0px 0px 10px;
+  box-shadow: 0px 4px 20px black;
   animation: slideDown 1s ease-in-out;
-  background-color: #1e293b; /* Dark blue navbar */
+  background: rgba(15, 23, 42, 0.9); /* Transparent dark glass effect */
+  backdrop-filter: blur(8px);
   color: white;
+  border-bottom: 2px solid black;
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: bold;
+  color: red;
+  text-shadow: 0px 0px 10px black;
+  animation: fadeInDown 1s ease;
 }
 
 .nav-links {
@@ -36,64 +43,74 @@ body {
 
 .nav-links li {
   margin-left: 10px;
-  background-color: white;
-  border-radius: 8px;
 }
 
 .nav-links a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
   font-weight: 600;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
 }
 
 .nav-links a:hover {
-  background: #38bdf8;
-  color: white;
+  background: red;
+  color: black;
+  box-shadow: 0px 0px 12px red;
 }
 
 /* ---------- Certifications Section ---------- */
 .certification-section {
-  padding: 40px;
+  padding: 60px 20px;
   text-align: center;
+  background: rgba(15, 23, 42, 0.8);
 }
 
 .certification-section h2 {
   font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #38bdf8;
+  margin-bottom: 40px;
+  color: red;
   animation: fadeInDown 1s ease;
+  text-shadow: 0px 0px 15px black;
 }
 
 .certification-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
 }
 
 .cert-card {
-  background: #1e293b;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
-  transition: transform 0.3s, background 0.3s;
+  background: rgba(30, 41, 59, 0.9);
+  padding: 25px 35px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px black;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
   font-size: 1.1rem;
   min-width: 220px;
   animation: fadeInUp 1s ease;
+  color: #f8fafc;
+  backdrop-filter: blur(6px);
 }
 
 .cert-card:hover {
-  transform: scale(1.05);
-  background: #0ea5e9;
+  transform: scale(1.08);
+  background: red;
   color: white;
+  box-shadow: 0px 0px 20px red;
   cursor: pointer;
 }
 
 /* ---------- Animations ---------- */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -142,11 +159,11 @@ body {
 
   .nav-links a {
     font-size: 16px;
-    padding: 8px;
+    padding: 8px 12px;
   }
 
   .certification-section {
-    padding: 20px;
+    padding: 30px 15px;
   }
 
   .certification-section h2 {
@@ -156,7 +173,12 @@ body {
   .cert-card {
     width: 100%;
     font-size: 0.95rem;
-    padding: 15px 20px;
+    padding: 18px 22px;
   }
+}
+img:hover {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: rotate(5deg);
 }
 
