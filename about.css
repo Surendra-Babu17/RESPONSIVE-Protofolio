@@ -86,6 +86,7 @@ img {
 }
 img:hover {
   transform: scale(1.05);
+  transform: rotate(10deg);
 }
 
 /* Navbar */
@@ -203,4 +204,5 @@ img:hover {
     background: transparent;
   }
 }
+
 
